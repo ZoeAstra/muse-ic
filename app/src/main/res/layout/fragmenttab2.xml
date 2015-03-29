@@ -8,7 +8,9 @@ android:layout_height="match_parent">
     android:layout_height="match_parent"
     android:layout_weight="1"
     android:textSize="16sp"
-    android:text="@string/muse_elem" />
+    android:text="@string/muse_elem"
+    android:paddingLeft="5dp"
+    android:paddingTop="5dp" />
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -20,28 +22,32 @@ android:layout_height="match_parent">
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:textSize="16sp"
-        android:text="@string/init_val" />
+        android:text="@string/init_val"
+        android:paddingLeft="5dp" />
     <TextView
         android:id="@+id/elem2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:textSize="16sp"
-        android:text="@string/init_val" />
+        android:text="@string/init_val"
+        android:paddingLeft="5dp" />
     <TextView
         android:id="@+id/elem3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:textSize="16sp"
-        android:text="@string/init_val" />
+        android:text="@string/init_val"
+        android:paddingLeft="5dp" />
     <TextView
         android:id="@+id/elem4"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:textSize="16sp"
-        android:text="@string/init_val" />
+        android:text="@string/init_val"
+        android:paddingLeft="5dp" />
 </LinearLayout>
 
 <TextView
@@ -50,7 +56,8 @@ android:layout_height="match_parent">
     android:layout_weight="1"
     android:textSize="16sp"
     android:text="@string/beta_elem"
-    android:id="@+id/betaHead" />
+    android:id="@+id/betaHead"
+    android:paddingLeft="5dp" />
 
 <LinearLayout
     android:layout_width="match_parent"
@@ -64,7 +71,8 @@ android:layout_height="match_parent">
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:textSize="16sp"
-        android:text="@string/init_val" />
+        android:text="@string/init_val"
+        android:paddingLeft="5dp" />
 
     <TextView
         android:id="@+id/beta2"
@@ -72,7 +80,8 @@ android:layout_height="match_parent">
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:textSize="16sp"
-        android:text="@string/init_val" />
+        android:text="@string/init_val"
+        android:paddingLeft="5dp" />
 
     <TextView
         android:id="@+id/beta3"
@@ -80,7 +89,8 @@ android:layout_height="match_parent">
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:textSize="16sp"
-        android:text="@string/init_val" />
+        android:text="@string/init_val"
+        android:paddingLeft="5dp" />
 
     <TextView
         android:id="@+id/beta4"
@@ -88,7 +98,8 @@ android:layout_height="match_parent">
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:textSize="16sp"
-        android:text="@string/init_val" />
+        android:text="@string/init_val"
+        android:paddingLeft="5dp" />
 </LinearLayout>
 
 <TextView
@@ -97,7 +108,8 @@ android:layout_height="match_parent">
     android:layout_weight="1"
     android:textSize="16sp"
     android:text="@string/delta_elem"
-    android:id="@+id/deltaHead" />
+    android:id="@+id/deltaHead"
+    android:paddingLeft="5dp" />
 
 <LinearLayout
     android:layout_width="match_parent"
@@ -111,7 +123,8 @@ android:layout_height="match_parent">
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:textSize="16sp"
-        android:text="@string/init_val" />
+        android:text="@string/init_val"
+        android:paddingLeft="5dp" />
 
     <TextView
         android:id="@+id/delta2"
@@ -119,7 +132,8 @@ android:layout_height="match_parent">
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:textSize="16sp"
-        android:text="@string/init_val" />
+        android:text="@string/init_val"
+        android:paddingLeft="5dp" />
 
     <TextView
         android:id="@+id/delta3"
@@ -127,7 +141,8 @@ android:layout_height="match_parent">
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:textSize="16sp"
-        android:text="@string/init_val" />
+        android:text="@string/init_val"
+        android:paddingLeft="5dp" />
 
     <TextView
         android:id="@+id/delta4"
@@ -135,7 +150,8 @@ android:layout_height="match_parent">
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:textSize="16sp"
-        android:text="@string/init_val" />
+        android:text="@string/init_val"
+        android:paddingLeft="5dp" />
 </LinearLayout>
 
 <TextView
@@ -144,7 +160,8 @@ android:layout_height="match_parent">
     android:layout_weight="1"
     android:textSize="16sp"
     android:text="@string/gamma_elem"
-    android:id="@+id/gammaHead" />
+    android:id="@+id/gammaHead"
+    android:paddingLeft="5dp" />
 
 <LinearLayout
     android:layout_width="match_parent"
@@ -158,7 +175,8 @@ android:layout_height="match_parent">
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:textSize="16sp"
-        android:text="@string/init_val" />
+        android:text="@string/init_val"
+        android:paddingLeft="5dp" />
 
     <TextView
         android:id="@+id/gamma2"
@@ -166,7 +184,8 @@ android:layout_height="match_parent">
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:textSize="16sp"
-        android:text="@string/init_val" />
+        android:text="@string/init_val"
+        android:paddingLeft="5dp" />
 
     <TextView
         android:id="@+id/gamma3"
@@ -174,7 +193,8 @@ android:layout_height="match_parent">
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:textSize="16sp"
-        android:text="@string/init_val" />
+        android:text="@string/init_val"
+        android:paddingLeft="5dp" />
 
     <TextView
         android:id="@+id/gamma4"
@@ -182,7 +202,8 @@ android:layout_height="match_parent">
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:textSize="16sp"
-        android:text="@string/init_val" />
+        android:text="@string/init_val"
+        android:paddingLeft="5dp" />
 </LinearLayout>
 
 <TextView
@@ -191,7 +212,8 @@ android:layout_height="match_parent">
     android:layout_weight="1"
     android:textSize="16sp"
     android:text="@string/theta_elem"
-    android:id="@+id/thetaHead" />
+    android:id="@+id/thetaHead"
+    android:paddingLeft="5dp" />
 
 <LinearLayout
     android:layout_width="match_parent"
@@ -205,7 +227,8 @@ android:layout_height="match_parent">
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:textSize="16sp"
-        android:text="@string/init_val" />
+        android:text="@string/init_val"
+        android:paddingLeft="5dp" />
 
     <TextView
         android:id="@+id/theta2"
@@ -213,7 +236,8 @@ android:layout_height="match_parent">
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:textSize="16sp"
-        android:text="@string/init_val" />
+        android:text="@string/init_val"
+        android:paddingLeft="5dp" />
 
     <TextView
         android:id="@+id/theta3"
@@ -221,7 +245,8 @@ android:layout_height="match_parent">
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:textSize="16sp"
-        android:text="@string/init_val" />
+        android:text="@string/init_val"
+        android:paddingLeft="5dp" />
 
     <TextView
         android:id="@+id/theta4"
@@ -229,7 +254,8 @@ android:layout_height="match_parent">
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:textSize="16sp"
-        android:text="@string/init_val" />
+        android:text="@string/init_val"
+        android:paddingLeft="5dp" />
 </LinearLayout>
 
 <TextView
@@ -237,13 +263,15 @@ android:layout_height="match_parent">
     android:layout_height="match_parent"
     android:layout_weight="1"
     android:textSize="16sp"
-    android:text="@string/version" />
+    android:text="@string/version"
+    android:paddingLeft="5dp" />
 <TextView
     android:id="@+id/version"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_weight="1"
     android:textSize="16sp"
-    android:text="@string/undefined" />
+    android:text="@string/undefined"
+    android:paddingLeft="5dp" />
 
 </LinearLayout>
