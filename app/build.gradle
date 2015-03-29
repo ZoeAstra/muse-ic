@@ -3,9 +3,8 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 21
     buildToolsVersion "21.1.2"
-
     defaultConfig {
-        applicationId "com.interaxon.test.libmuse"
+        applicationId 'com.awesome.museic'
         minSdkVersion 11
         targetSdkVersion 21
         compileOptions {
@@ -13,12 +12,13 @@ android {
             targetCompatibility JavaVersion.VERSION_1_7
         }
     }
-
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
+    }
+    productFlavors {
     }
 }
 

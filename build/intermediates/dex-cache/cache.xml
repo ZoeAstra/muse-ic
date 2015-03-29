@@ -2,18 +2,18 @@
 <items version="2" >
 
     <item
-        jar="/Users/Alex/AndroidStudioProjects/muse-ic_2.0/app/libs/libmuseandroid.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="29c9db643c9cd140b86ad1788d6b9fdf96983037">
-        <dex dex="/Users/Alex/AndroidStudioProjects/muse-ic_2.0/app/build/intermediates/pre-dexed/debug/libmuseandroid-12882a24aeb2ba49cfff6efeef0df46919e34406.jar" />
-    </item>
-    <item
-        jar="/Users/Alex/Library/Android/sdk/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
+        jar="C:\Users\Asera\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
-        <dex dex="/Users/Alex/AndroidStudioProjects/muse-ic_2.0/app/build/intermediates/pre-dexed/debug/support-v4-19.1.0-3d67ed51ed6b3f08870bd8e36ab1e177a6e80cab.jar" />
+        <dex dex="C:\Users\Asera\AndroidstudioProjects\muse-ic\app\build\intermediates\pre-dexed\debug\support-v4-19.1.0-56e2ce77e9b98d47a604533ba5ca2a343aff7631.jar" />
+    </item>
+    <item
+        jar="C:\Users\Asera\AndroidstudioProjects\muse-ic\app\libs\libmuseandroid.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="29c9db643c9cd140b86ad1788d6b9fdf96983037">
+        <dex dex="C:\Users\Asera\AndroidstudioProjects\muse-ic\app\build\intermediates\pre-dexed\debug\libmuseandroid-7e3132567748d3a93fe7f871daaba2ada8229032.jar" />
     </item>
 
 </items>
