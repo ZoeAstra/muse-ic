@@ -12,6 +12,9 @@ import java.sql.Timestamp;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
+import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -65,7 +68,31 @@ import com.interaxon.libmuse.MuseVersion;
  * Version information and MuseElements (alpha, beta, theta, delta, gamma waves)
  * on the screen.
  */
-public class MainActivity extends Activity implements OnClickListener {
+public class MainActivity extends FragmentActivity {
+    public Muse getMuse() {
+        return muse;
+    }
+
+    public void setMuse(Muse muse) {
+        this.muse = muse;
+    }
+
+    public boolean isDataTransmission() {
+        return dataTransmission;
+    }
+
+    public void setDataTransmission(boolean dataTransmission) {
+        this.dataTransmission = dataTransmission;
+    }
+
+    public boolean isLoaded() {
+        return loaded;
+    }
+
+    public void setLoaded(boolean loaded) {
+        this.loaded = loaded;
+    }
+
     /**
      * Connection listener updates UI with new connection status and logs it.
      */
@@ -588,17 +615,15 @@ public class MainActivity extends Activity implements OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         //Make buttons
         super.onCreate(savedInstanceState);
+
+        // Get the view from activity_main.xml
         setContentView(R.layout.activity_main);
-        Button refreshButton = (Button) findViewById(R.id.refresh);
-        refreshButton.setOnClickListener(this);
-        Button connectButton = (Button) findViewById(R.id.connect);
-        connectButton.setOnClickListener(this);
-        Button disconnectButton = (Button) findViewById(R.id.disconnect);
-        disconnectButton.setOnClickListener(this);
-        Button pauseButton = (Button) findViewById(R.id.pause);
-        pauseButton.setOnClickListener(this);
-        Button testButton = (Button) findViewById(R.id.test);
-        testButton.setOnClickListener(this);
+
+        // Locate the viewpager in activity_main.xml
+        ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
+
+        // Set the ViewPagerAdapter into ViewPager
+        viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager()));
 
         // AudioManager audio settings for adjusting the volume
         audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
@@ -960,78 +985,7 @@ public class MainActivity extends Activity implements OnClickListener {
         }
     }
 
-
-
-    @Override
-    public void onClick(View v) {
-        Spinner musesSpinner = (Spinner) findViewById(R.id.muses_spinner);
-        if (v.getId() == R.id.refresh) {
-            MuseManager.refreshPairedMuses();
-            List<Muse> pairedMuses = MuseManager.getPairedMuses();
-            List<String> spinnerItems = new ArrayList<String>();
-            for (Muse m: pairedMuses) {
-                String dev_id = m.getName() + "-" + m.getMacAddress();
-                Log.i("Muse Headband", dev_id);
-                spinnerItems.add(dev_id);
-            }
-            ArrayAdapter<String> adapterArray = new ArrayAdapter<String> (
-                    this, android.R.layout.simple_spinner_item, spinnerItems);
-            musesSpinner.setAdapter(adapterArray);
-        }
-        else if (v.getId() == R.id.connect) {
-            List<Muse> pairedMuses = MuseManager.getPairedMuses();
-            if (pairedMuses.size() < 1 ||
-                musesSpinner.getAdapter().getCount() < 1) {
-                Log.w("Muse Headband", "There is nothing to connect to");
-            }
-            else {
-                muse = pairedMuses.get(musesSpinner.getSelectedItemPosition());
-                ConnectionState state = muse.getConnectionState();
-                if (state == ConnectionState.CONNECTED ||
-                    state == ConnectionState.CONNECTING) {
-                    Log.w("Muse Headband", "doesn't make sense to connect second time to the same muse");
-                    return;
-                }
-                configure_library();
-                /**
-                 * In most cases libmuse native library takes care about
-                 * exceptions and recovery mechanism, but native code still
-                 * may throw in some unexpected situations (like bad bluetooth
-                 * connection). Print all exceptions here.
-                 */
-                try {
-                    muse.runAsynchronously();
-                } catch (Exception e) {
-                    Log.e("Muse Headband", e.toString());
-                }
-            }
-        }
-        else if (v.getId() == R.id.disconnect) {
-            if (muse != null) {
-                /**
-                 * true flag will force libmuse to unregister all listeners,
-                 * BUT AFTER disconnecting and sending disconnection event.
-                 * If you don't want to receive disconnection event (for ex.
-                 * you call disconnect when application is closed), then
-                 * unregister listeners first and then call disconnect:
-                 * muse.unregisterAllListeners();
-                 * muse.disconnect(false);
-                 */
-                muse.disconnect(true);
-            }
-        }
-        else if (v.getId() == R.id.pause) {
-            dataTransmission = !dataTransmission;
-            if (muse != null) {
-                muse.enableDataTransmission(dataTransmission);
-            }
-        }
-        else if (v.getId() == R.id.test && loaded) {
-            pool.play(c4, volume, volume, 1, 0, 1f);
-        }
-    }
-
-    private void configure_library() {
+    public void configure_library() {
         muse.registerConnectionListener(connectionListener);
         muse.registerDataListener(dataListener,
                                   MuseDataPacketType.ACCELEROMETER);

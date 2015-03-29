@@ -23,4 +23,6 @@
     <string name="gamma_elem">Relative Gammas:</string>
     <string name="theta_elem">Relative Thetas:</string>
     <string name="testButton">Test Button</string>
+    <string name="Fragment1">Fragment 1</string>
+    <string name="Fragment2">Fragment 2</string>
 </resources>
