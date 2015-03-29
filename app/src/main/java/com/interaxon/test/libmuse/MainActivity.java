@@ -332,7 +332,7 @@ public class MainActivity extends FragmentActivity {
                         timerA += delta;
                         if (timerA > Atime && avgA > 0 && play_alpha)
                         {
-                            playPiano(avgA, 4);
+                            playPianoMajorC(avgA, 4);
                             timerA = 0;
                         }
                     }
@@ -395,7 +395,7 @@ public class MainActivity extends FragmentActivity {
                         timerB += delta;
                         if (timerB > Btime && avgA > 0 && play_beta)
                         {
-                            playPiano(avgA, 5);
+                            playPianoMajorC(avgA, 5);
                             timerB = 0;
                         }
                     }
@@ -458,7 +458,7 @@ public class MainActivity extends FragmentActivity {
                         timerD += delta;
                         if (timerD > Dtime && avgA > 0 && play_delta)
                         {
-                            playPiano(avgA, 2);
+                            playPianoMajorC(avgA, 2);
                             timerD = 0;
                         }
                     }
@@ -521,7 +521,7 @@ public class MainActivity extends FragmentActivity {
                         timerG += delta;
                         if (timerG > Gtime && avgA > 0 && play_gamma)
                         {
-                            playPiano(avgA, 6);
+                            playPianoMajorC(avgA, 6);
                             timerG = 0;
                         }
                     }
@@ -584,7 +584,7 @@ public class MainActivity extends FragmentActivity {
                         timerT += delta;
                         if (timerT > Ttime && avgA > 0 && play_theta)
                         {
-                            playPiano(avgA, 3);
+                            playPianoMajorC(avgA, 3);
                             timerT = 0;
                         }
                     }
@@ -1008,6 +1008,170 @@ public class MainActivity extends FragmentActivity {
             else if (val < .95)
             {
                 pool.play(bb6, volume, volume, 1, 0, 1f);
+            }
+            else if (val < 1)
+            {
+                pool.play(b6, volume, volume, 1, 0, 1f);
+            }
+        }
+    }
+
+    /**
+     * Plays a piano note, based on a value (val) between 0 and 1 to determine the key, and an
+     * octave between 2 and 6 - Major C version
+     *
+     */
+    private void playPianoMajorC(double val, int octave)
+    {
+        if(octave == 2)
+        {
+            if (val < .14286 )
+            {
+                pool.play(c2, volume, volume, 1, 0, 1f);
+            }
+            else if (val < .21313)
+            {
+                pool.play(d2, volume, volume, 1, 0, 1f);
+            }
+            else if (val < .42857)
+            {
+                pool.play(e2, volume, volume, 1, 0, 1f);
+            }
+            else if (val < .57143)
+            {
+                pool.play(f2, volume, volume, 1, 0, 1f);
+            }
+            else if (val < .71429)
+            {
+                pool.play(g2, volume, volume, 1, 0, 1f);
+            }
+            else if (val < .86)
+            {
+                pool.play(a2, volume, volume, 1, 0, 1f);
+            }
+            else if (val < 1)
+            {
+                pool.play(b2, volume, volume, 1, 0, 1f);
+            }
+        }
+        else if(octave == 3)
+        {
+            if (val < .14286 )
+            {
+                pool.play(c3, volume, volume, 1, 0, 1f);
+            }
+            else if (val < .28571)
+            {
+                pool.play(d3, volume, volume, 1, 0, 1f);
+            }
+            else if (val < .42857)
+            {
+                pool.play(e3, volume, volume, 1, 0, 1f);
+            }
+            else if (val < .57143)
+            {
+                pool.play(f3, volume, volume, 1, 0, 1f);
+            }
+            else if (val < .71429)
+            {
+                pool.play(g3, volume, volume, 1, 0, 1f);
+            }
+            else if (val < .86)
+            {
+                pool.play(a3, volume, volume, 1, 0, 1f);
+            }
+            else if (val < 1)
+            {
+                pool.play(b3, volume, volume, 1, 0, 1f);
+            }
+        }
+        else if(octave == 4)
+        {
+            if (val < .14286 )
+            {
+                pool.play(c4, volume, volume, 1, 0, 1f);
+            }
+            else if (val < .28571)
+            {
+                pool.play(d4, volume, volume, 1, 0, 1f);
+            }
+            else if (val < .42857)
+            {
+                pool.play(e4, volume, volume, 1, 0, 1f);
+            }
+            else if (val < .57143)
+            {
+                pool.play(f4, volume, volume, 1, 0, 1f);
+            }
+            else if (val < .71429)
+            {
+                pool.play(g4, volume, volume, 1, 0, 1f);
+            }
+            else if (val < .86)
+            {
+                pool.play(a4, volume, volume, 1, 0, 1f);
+            }
+            else if (val < 1)
+            {
+                pool.play(b4, volume, volume, 1, 0, 1f);
+            }
+        }
+        else if(octave == 5)
+        {
+            if (val < .14286 )
+            {
+                pool.play(c5, volume, volume, 1, 0, 1f);
+            }
+            else if (val < .28571)
+            {
+                pool.play(d5, volume, volume, 1, 0, 1f);
+            }
+            else if (val < .42857)
+            {
+                pool.play(e5, volume, volume, 1, 0, 1f);
+            }
+            else if (val < .57143)
+            {
+                pool.play(f5, volume, volume, 1, 0, 1f);
+            }
+            else if (val < .71429)
+            {
+                pool.play(g5, volume, volume, 1, 0, 1f);
+            }
+            else if (val < .86)
+            {
+                pool.play(a5, volume, volume, 1, 0, 1f);
+            }
+            else if (val < 1)
+            {
+                pool.play(b5, volume, volume, 1, 0, 1f);
+            }
+        }
+        else if(octave == 6)
+        {
+            if (val < .14286 )
+            {
+                pool.play(c6, volume, volume, 1, 0, 1f);
+            }
+            else if (val < .28571)
+            {
+                pool.play(d6, volume, volume, 1, 0, 1f);
+            }
+            else if (val < .42857)
+            {
+                pool.play(e6, volume, volume, 1, 0, 1f);
+            }
+            else if (val < .57143)
+            {
+                pool.play(f6, volume, volume, 1, 0, 1f);
+            }
+            else if (val < .71429)
+            {
+                pool.play(g6, volume, volume, 1, 0, 1f);
+            }
+            else if (val < .86)
+            {
+                pool.play(a6, volume, volume, 1, 0, 1f);
             }
             else if (val < 1)
             {
