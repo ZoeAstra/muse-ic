@@ -1,15 +1,97 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent">
 
+    <Spinner
+        android:id="@+id/muses_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal" >
+        <Button
+            android:id="@+id/refresh"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="@string/refresh" />
+        <Button
+            android:id="@+id/connect"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="@string/connect" />
+        <Button
+            android:id="@+id/disconnect"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:text="@string/disconnect" />
+    </LinearLayout>
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/Fragment2" />
+        android:layout_weight="1"
+        android:textSize="16sp"
+        android:text="@string/status" />
+    <TextView
+        android:id="@+id/con_status"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="16sp"
+        android:text="@string/undefined" />
 
-</RelativeLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/alpha_wave"
+            android:id="@+id/a_box"
+            android:checked="false" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/beta_wave"
+            android:id="@+id/b_box" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/delta_wave"
+            android:id="@+id/d_box" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gamma_wave"
+            android:id="@+id/g_box" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/theta_wave"
+            android:id="@+id/t_box"
+            android:checked="false" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+        <Button
+            android:id="@+id/pause"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:text="@string/pause"
+            android:singleLine="false" />
+
+    </LinearLayout>
+</LinearLayout>
 
 <!-- From: file:/Users/Alex/AndroidStudioProjects/muse-ic_2.0/app/src/main/res/layout/fragmenttab1.xml -->

@@ -22,7 +22,9 @@
     <string name="delta_elem">Relative Deltas:</string>
     <string name="gamma_elem">Relative Gammas:</string>
     <string name="theta_elem">Relative Thetas:</string>
-    <string name="testButton">Test Button</string>
-    <string name="Fragment1">Fragment 1</string>
-    <string name="Fragment2">Fragment 2</string>
+    <string name="alpha_wave">Alpha Wave</string>
+    <string name="beta_wave">Beta Wave</string>
+    <string name="delta_wave">Delta Wave</string>
+    <string name="gamma_wave">Gamma Wave</string>
+    <string name="theta_wave">Theta Wave</string>
 </resources>

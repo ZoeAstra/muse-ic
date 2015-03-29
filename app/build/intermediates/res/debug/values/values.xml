@@ -6,19 +6,21 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <!-- From: file:/Users/Alex/AndroidStudioProjects/muse-ic_2.0/app/src/main/res/values/strings.xml -->
     <eat-comment/>
-    <string name="Fragment1">Fragment 1</string>
-    <string name="Fragment2">Fragment 2</string>
     <string name="accel">Accelerometer Data:</string>
     <string name="action_settings">Settings</string>
+    <string name="alpha_wave">Alpha Wave</string>
     <string name="app_name">TestLibMuseAndroid</string>
     <string name="artifacts">Blinks, Jaw: </string>
     <string name="beta_elem">Relative Betas:</string>
+    <string name="beta_wave">Beta Wave</string>
     <string name="connect">Connect</string>
     <string name="delta_elem">Relative Deltas:</string>
+    <string name="delta_wave">Delta Wave</string>
     <string name="disconnect">Disconnect</string>
     <string name="drop">Drop</string>
     <string name="eeg">EEG data:</string>
     <string name="gamma_elem">Relative Gammas:</string>
+    <string name="gamma_wave">Gamma Wave</string>
     <string name="hello_world">Hello world!</string>
     <string name="init_val">0.0</string>
     <string name="msg_count">Msg number, size: </string>
@@ -26,8 +28,8 @@
     <string name="pause">Pause/Resume</string>
     <string name="refresh">Refresh</string>
     <string name="status">Connection Status:</string>
-    <string name="testButton">Test Button</string>
     <string name="theta_elem">Relative Thetas:</string>
+    <string name="theta_wave">Theta Wave</string>
     <string name="undefined">unknown</string>
     <string name="version">Version:</string>
     <!-- From: file:/Users/Alex/AndroidStudioProjects/muse-ic_2.0/app/src/main/res/values/styles.xml -->

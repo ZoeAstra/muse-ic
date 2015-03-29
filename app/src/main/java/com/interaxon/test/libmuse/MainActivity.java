@@ -93,6 +93,46 @@ public class MainActivity extends FragmentActivity {
         this.loaded = loaded;
     }
 
+    public boolean isPlay_alpha() {
+        return play_alpha;
+    }
+
+    public void setPlay_alpha(boolean play_alpha) {
+        this.play_alpha = play_alpha;
+    }
+
+    public boolean isPlay_beta() {
+        return play_beta;
+    }
+
+    public void setPlay_beta(boolean play_beta) {
+        this.play_beta = play_beta;
+    }
+
+    public boolean isPlay_delta() {
+        return play_delta;
+    }
+
+    public void setPlay_delta(boolean play_delta) {
+        this.play_delta = play_delta;
+    }
+
+    public boolean isPlay_gamma() {
+        return play_gamma;
+    }
+
+    public void setPlay_gamma(boolean play_gamma) {
+        this.play_gamma = play_gamma;
+    }
+
+    public boolean isPlay_theta() {
+        return play_theta;
+    }
+
+    public void setPlay_theta(boolean play_theta) {
+        this.play_theta = play_theta;
+    }
+
     /**
      * Connection listener updates UI with new connection status and logs it.
      */
@@ -252,7 +292,6 @@ public class MainActivity extends FragmentActivity {
                         TextView elem2 = (TextView) findViewById(R.id.elem2);
                         TextView elem3 = (TextView) findViewById(R.id.elem3);
                         TextView elem4 = (TextView) findViewById(R.id.elem4);
-                        TextView out1 = (TextView) findViewById(R.id.out1);
                         elem1.setText(String.format(
                         "%6.2f", data.get(Eeg.TP9.ordinal())));
                         elem2.setText(String.format(
@@ -287,13 +326,11 @@ public class MainActivity extends FragmentActivity {
 
                         double avgA = sum/count;
 
-                        out1.setText(String.format("%6.2f", avgA));
-
                         long curTime = System.currentTimeMillis();
                         long delta = curTime-prevTimeA;
                         prevTimeA = curTime;
                         timerA += delta;
-                        if (timerA > Atime && avgA > 0)
+                        if (timerA > Atime && avgA > 0 && play_alpha)
                         {
                             playPiano(avgA, 4);
                             timerA = 0;
@@ -318,7 +355,6 @@ public class MainActivity extends FragmentActivity {
                         TextView beta2 = (TextView) findViewById(R.id.beta2);
                         TextView beta3 = (TextView) findViewById(R.id.beta3);
                         TextView beta4 = (TextView) findViewById(R.id.beta4);
-                        TextView out1 = (TextView) findViewById(R.id.out1);
                         beta1.setText(String.format(
                                 "%6.2f", data.get(Eeg.TP9.ordinal())));
                         beta2.setText(String.format(
@@ -353,13 +389,11 @@ public class MainActivity extends FragmentActivity {
 
                         double avgA = sum/count;
 
-                        out1.setText(String.format("%6.2f", avgA));
-
                         long curTime = System.currentTimeMillis();
                         long delta = curTime-prevTimeB;
                         prevTimeB = curTime;
                         timerB += delta;
-                        if (timerB > Btime && avgA > 0)
+                        if (timerB > Btime && avgA > 0 && play_beta)
                         {
                             playPiano(avgA, 5);
                             timerB = 0;
@@ -384,7 +418,6 @@ public class MainActivity extends FragmentActivity {
                         TextView delta2 = (TextView) findViewById(R.id.delta2);
                         TextView delta3 = (TextView) findViewById(R.id.delta3);
                         TextView delta4 = (TextView) findViewById(R.id.delta4);
-                        TextView out1 = (TextView) findViewById(R.id.out1);
                         delta1.setText(String.format(
                                 "%6.2f", data.get(Eeg.TP9.ordinal())));
                         delta2.setText(String.format(
@@ -419,13 +452,11 @@ public class MainActivity extends FragmentActivity {
 
                         double avgA = sum/count;
 
-                        out1.setText(String.format("%6.2f", avgA));
-
                         long curTime = System.currentTimeMillis();
                         long delta = curTime-prevTimeD;
                         prevTimeD = curTime;
                         timerD += delta;
-                        if (timerD > Dtime && avgA > 0)
+                        if (timerD > Dtime && avgA > 0 && play_delta)
                         {
                             playPiano(avgA, 2);
                             timerD = 0;
@@ -450,7 +481,6 @@ public class MainActivity extends FragmentActivity {
                         TextView gamma2 = (TextView) findViewById(R.id.gamma2);
                         TextView gamma3 = (TextView) findViewById(R.id.gamma3);
                         TextView gamma4 = (TextView) findViewById(R.id.gamma4);
-                        TextView out1 = (TextView) findViewById(R.id.out1);
                         gamma1.setText(String.format(
                                 "%6.2f", data.get(Eeg.TP9.ordinal())));
                         gamma2.setText(String.format(
@@ -485,13 +515,11 @@ public class MainActivity extends FragmentActivity {
 
                         double avgA = sum/count;
 
-                        out1.setText(String.format("%6.2f", avgA));
-
                         long curTime = System.currentTimeMillis();
                         long delta = curTime-prevTimeG;
                         prevTimeG = curTime;
                         timerG += delta;
-                        if (timerG > Gtime && avgA > 0)
+                        if (timerG > Gtime && avgA > 0 && play_gamma)
                         {
                             playPiano(avgA, 6);
                             timerG = 0;
@@ -516,7 +544,6 @@ public class MainActivity extends FragmentActivity {
                         TextView theta2 = (TextView) findViewById(R.id.theta2);
                         TextView theta3 = (TextView) findViewById(R.id.theta3);
                         TextView theta4 = (TextView) findViewById(R.id.theta4);
-                        TextView out1 = (TextView) findViewById(R.id.out1);
                         theta1.setText(String.format(
                                 "%6.2f", data.get(Eeg.TP9.ordinal())));
                         theta2.setText(String.format(
@@ -551,13 +578,11 @@ public class MainActivity extends FragmentActivity {
 
                         double avgA = sum/count;
 
-                        out1.setText(String.format("%6.2f", avgA));
-
                         long curTime = System.currentTimeMillis();
                         long delta = curTime-prevTimeT;
                         prevTimeT = curTime;
                         timerT += delta;
-                        if (timerT > Ttime && avgA > 0)
+                        if (timerT > Ttime && avgA > 0 && play_theta)
                         {
                             playPiano(avgA, 3);
                             timerT = 0;
@@ -602,6 +627,12 @@ public class MainActivity extends FragmentActivity {
     private long Dtime = 2000;
     private long Gtime = 750;
     private long Ttime = 1500;
+
+    private boolean play_alpha = false;
+    private boolean play_beta = false;
+    private boolean play_delta = false;
+    private boolean play_gamma = false;
+    private boolean play_theta = false;
 
     public MainActivity() {
         // Create listeners and pass reference to activity to them
