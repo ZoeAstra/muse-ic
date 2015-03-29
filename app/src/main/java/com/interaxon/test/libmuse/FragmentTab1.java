@@ -145,7 +145,7 @@ public class FragmentTab1 extends Fragment implements View.OnClickListener{
         }
         else if (v.getId() == R.id.pause) {
             boolean dataTransmission = mainActivity.isDataTransmission();
-            dataTransmission = !dataTransmission;
+            mainActivity.setDataTransmission(!dataTransmission);
             if (mainActivity.getMuse() != null) {
                 mainActivity.getMuse().enableDataTransmission(dataTransmission);
             }
